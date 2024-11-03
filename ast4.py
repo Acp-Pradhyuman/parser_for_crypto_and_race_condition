@@ -12,7 +12,8 @@ class CppVulnerabilityAnalyzer:
             "DES_ecb_encrypt", "SHA1_Init", "SHA1_Update",
             "SHA1_Final", "SHA1_Transform", "PKCS5_PBKDF2_HMAC_SHA1",
             "EVP_md5_sha1", "MD5_CTX", "MD5state_st",
-            "MD5_Init", "MD5_Update", "MD5_Final", "MD5_Transform"
+            "MD5_Init", "MD5_Update", "MD5_Final", "MD5_Transform",
+            "DES_set_key_checked"
         ]
         self.weak_headers = {
             "MD5": "<openssl/md5.h>",
@@ -20,6 +21,7 @@ class CppVulnerabilityAnalyzer:
             "EVP_md5": "<openssl/evp.h>",
             "EVP_sha1": "<openssl/evp.h>",
             "DES_ecb_encrypt": "<openssl/des.h>",
+            "DES_set_key_checked": "<openssl/des.h>",
             "SHA1_Init": "<openssl/sha.h>",
             "SHA1_Update": "<openssl/sha.h>",
             "SHA1_Final": "<openssl/sha.h>",
