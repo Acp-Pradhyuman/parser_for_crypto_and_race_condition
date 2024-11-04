@@ -48,11 +48,4 @@ for cpp_file_path in glob.glob(cpp_dir):
     except subprocess.CalledProcessError as e:
         print(f"Valgrind encountered an error:\n{e.output.decode(errors='replace')}")
 
-    # Delete the generated executable
-    try:
-        os.remove(base_name)
-        print(f"Deleted executable {base_name}.")
-    except OSError as e:
-        print(f"Error deleting file {base_name}: {e}")
-
     print(f"Finished processing {base_name}.")
